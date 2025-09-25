@@ -1,0 +1,57 @@
+/* Navbar container */
+.fancy-navbar {
+  background: linear-gradient(90deg, #6a11cb, #2575fc); /* gradient */
+  padding: 15px 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Nav links */
+.fancy-nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.fancy-nav-links li {
+  position: relative;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+/* Hover effect: text color + scale */
+.fancy-nav-links li:hover {
+  color: #ffe066;
+  transform: scale(1.1);
+}
+
+/* Underline animation */
+.fancy-nav-links li .underline {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 4px;
+  background-color: #ffe066; /* brighter accent */
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+/* Show underline on hover or active */
+.fancy-nav-links li:hover .underline,
+.fancy-nav-links li.active .underline {
+  width: 100%;
+}
+
+/* Add subtle shadow on active link */
+.fancy-nav-links li.active {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
